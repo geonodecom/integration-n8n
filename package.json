@@ -1,0 +1,67 @@
+{
+  "name": "n8n-nodes-scraperapi",
+  "version": "0.2.3",
+  "description": "Add web scraping to self-hosted n8n with Geonode’s community node for page extraction, batches, crawls, search and extraction or crawl completion triggers.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "scraper",
+    "scraping",
+    "crawl",
+    "extract"
+  ],
+  "license": "MIT",
+  "homepage": "https://geonode.com/integrations",
+  "author": {
+    "name": "Geonode",
+    "email": "support@geonode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geonodecom/integration-n8n.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "files": [
+    "dist",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "test": "node --test"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ScraperApiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ScraperApi/ScraperApi.node.js",
+      "dist/nodes/ScraperApiTrigger/ScraperApiTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "*",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/geonodecom/integration-n8n/issues"
+  }
+}
