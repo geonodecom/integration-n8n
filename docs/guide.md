@@ -1,5 +1,3 @@
-> This guide is adapted from the [original source guide](https://github.com/geonodecom/scraper-api-sdks/blob/b9ebe5d53bd1b74a9de3f17d33e62e4f9054eea0/n8n-nodes-scraperapi/README.md). Paths below are relative to this standalone repository. Publishing remains in the original monorepo; see [release migration](release-migration.md).
-
 # Geonode Scraper API node for n8n
 
 [Integrations page](https://geonode.com/integrations) · [Geonode API docs](https://docs.geonode.com/docs/scraper-api) · [n8n setup guide](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n) · [GitHub source](https://github.com/geonodecom/integration-n8n) · [Published package](https://www.npmjs.com/package/n8n-nodes-scraperapi) · [Repository overview](../README.md)

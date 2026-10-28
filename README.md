@@ -94,9 +94,9 @@ Open `http://localhost:5678`. Rebuild after editing TypeScript, then restart the
 
 ## Source and releases
 
-This repository preserves the node's extracted history from the Geonode SDK monorepo. Package names, node identifiers and credential types are unchanged. Publishing remains in the original monorepo until the [release migration](docs/release-migration.md) is completed; this repository has no automatic publishing workflow.
+Package names, node identifiers and credential types are kept stable. Maintainers publish releases to npm with the `Publish` workflow in GitHub Actions.
 
-[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Source provenance](docs/provenance.md) · [Contact Geonode](https://geonode.com/contact)
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Contact Geonode](https://geonode.com/contact)
 
 MIT licensed. See [LICENSE](LICENSE).
 

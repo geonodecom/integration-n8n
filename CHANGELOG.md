@@ -6,6 +6,8 @@ The format is inspired by Keep a Changelog.
 
 ## [Unreleased]
 
+- Removed the internal repository preparation notes and links to the old monorepo.
+
 - Docs links point to the package's page at https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n.
 
 - README rewritten for n8n users so it can be published as the node page on docs.geonode.com: install, credentials, a first workflow, operations, the trigger, errors and retries. Developer notes moved to the end.
