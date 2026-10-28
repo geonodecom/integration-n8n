@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-scraperapi",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Add web scraping to self-hosted n8n with Geonode’s community node for page extraction, batches, crawls, search and extraction or crawl completion triggers.",
   "keywords": [
     "n8n-community-node-package",
