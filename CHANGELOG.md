@@ -6,6 +6,8 @@ The format is inspired by Keep a Changelog.
 
 ## [Unreleased]
 
+- The integrations page link and package homepage point to this integration's own page.
+
 ## [0.2.4] - 2026-10-28
 
 - Releases carry an npm provenance statement linking the package to this repository.

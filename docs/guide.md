@@ -1,6 +1,6 @@
 # Geonode Scraper API node for n8n
 
-[Integrations page](https://geonode.com/integrations) · [Geonode API docs](https://docs.geonode.com/docs/scraper-api) · [n8n setup guide](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n) · [GitHub source](https://github.com/geonodecom/integration-n8n) · [Published package](https://www.npmjs.com/package/n8n-nodes-scraperapi) · [Repository overview](../README.md)
+[Integrations page](https://geonode.com/integrations/integration-n8n) · [Geonode API docs](https://docs.geonode.com/docs/scraper-api) · [n8n setup guide](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n) · [GitHub source](https://github.com/geonodecom/integration-n8n) · [Published package](https://www.npmjs.com/package/n8n-nodes-scraperapi) · [Repository overview](../README.md)
 
 **[Try Geonode for free](https://app.geonode.com/sign-up)**
 

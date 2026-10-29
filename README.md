@@ -6,7 +6,7 @@ Bring web data into self-hosted n8n agents and workflows with Geonode’s commun
 
 **[Try Geonode for free](https://app.geonode.com/sign-up)**
 
-[Integrations page](https://geonode.com/integrations) · [Geonode API docs](https://docs.geonode.com/docs/scraper-api) · [n8n setup guide](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n) · [View package on npm](https://www.npmjs.com/package/n8n-nodes-scraperapi) · [View source on GitHub](https://github.com/geonodecom/integration-n8n) · [Complete guide](docs/guide.md)
+[Integrations page](https://geonode.com/integrations/integration-n8n) · [Geonode API docs](https://docs.geonode.com/docs/scraper-api) · [n8n setup guide](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n) · [View package on npm](https://www.npmjs.com/package/n8n-nodes-scraperapi) · [View source on GitHub](https://github.com/geonodecom/integration-n8n) · [Complete guide](docs/guide.md)
 
 **For self-hosted n8n.** This is a community node, not a verified n8n Cloud node. The npm package name remains `n8n-nodes-scraperapi`.
 
