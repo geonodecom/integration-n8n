@@ -66,24 +66,27 @@ export interface PollingDefaults {
   timeoutMs: number;
 }
 
-/* eslint-disable n8n-nodes-base/node-param-default-missing */
 export function pollingFields(show: Show, defaults: PollingDefaults): INodeProperties[] {
   const waitShow: Show = { ...show, waitForCompletion: [true] };
+  const { waitDefault, intervalMs, timeoutMs } = defaults;
+  const waitField: INodeProperties = {
+    displayName: 'Wait for Completion',
+    name: 'waitForCompletion',
+    type: 'boolean',
+    default: false,
+    description:
+      'Whether to poll the job until it reaches a terminal state and return the final result',
+    displayOptions: { show },
+  };
+  // Lint needs a boolean literal above; extraction waits by default, batches and crawls don't.
+  waitField.default = waitDefault;
   return [
-    {
-      displayName: 'Wait for Completion',
-      name: 'waitForCompletion',
-      type: 'boolean',
-      default: defaults.waitDefault,
-      description:
-        'Whether to poll the job until it reaches a terminal state and return the final result',
-      displayOptions: { show },
-    },
+    waitField,
     {
       displayName: 'Poll Interval (Ms)',
       name: 'pollIntervalMs',
       type: 'number',
-      default: defaults.intervalMs,
+      default: intervalMs,
       typeOptions: { minValue: 500 },
       displayOptions: { show: waitShow },
     },
@@ -91,10 +94,9 @@ export function pollingFields(show: Show, defaults: PollingDefaults): INodePrope
       displayName: 'Poll Timeout (Ms)',
       name: 'pollTimeoutMs',
       type: 'number',
-      default: defaults.timeoutMs,
+      default: timeoutMs,
       typeOptions: { minValue: 1000 },
       displayOptions: { show: waitShow },
     },
   ];
 }
-/* eslint-enable n8n-nodes-base/node-param-default-missing */

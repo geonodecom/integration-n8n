@@ -6,6 +6,10 @@ The format is inspired by Keep a Changelog.
 
 ## [Unreleased]
 
+- The node, trigger and credential are named "Geonode Scraper API" and "Geonode Scraper API Trigger" in the n8n editor. Internal node and credential names are unchanged, so existing workflows keep working.
+- The node can be used as a tool by n8n's AI Agent (`usableAsTool`).
+- Passes n8n's community package checks: credential icon, connection types, error wrapping and parameter defaults. A webhook that can't be deleted on deactivation is now logged as a warning.
+- Needs n8n 1.85 or newer.
 - The integrations page link and package homepage point to this integration's own page.
 
 ## [0.2.4] - 2026-10-28

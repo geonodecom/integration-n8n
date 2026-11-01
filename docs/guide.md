@@ -4,7 +4,7 @@
 
 **[Try Geonode for free](https://app.geonode.com/sign-up)**
 
-An n8n community node for the [Geonode Scraper API](https://geonode.com/products/scraper-api). The **Scraper API** node extracts pages as Markdown or HTML, runs batches and crawls, maps a site's URLs, searches the web, manages webhooks and reads statistics. The **Scraper API Trigger** node starts a workflow when an extraction or a crawl finishes. Package: [`n8n-nodes-scraperapi` on npm](https://www.npmjs.com/package/n8n-nodes-scraperapi).
+An n8n community node for the [Geonode Scraper API](https://geonode.com/products/scraper-api). The **Geonode Scraper API** node extracts pages as Markdown or HTML, runs batches and crawls, maps a site's URLs, searches the web, manages webhooks and reads statistics. The **Geonode Scraper API Trigger** node starts a workflow when an extraction or a crawl finishes. Package: [`n8n-nodes-scraperapi` on npm](https://www.npmjs.com/package/n8n-nodes-scraperapi).
 
 ## Before you start
 
@@ -16,17 +16,17 @@ An n8n community node for the [Geonode Scraper API](https://geonode.com/products
 1. In n8n, open **Settings → Community Nodes** and select **Install**.
 2. Enter `n8n-nodes-scraperapi`, confirm that you understand the risks of community nodes, and select **Install**.
 
-The **Scraper API** and **Scraper API Trigger** nodes now appear in the node panel.
+The **Geonode Scraper API** and **Geonode Scraper API Trigger** nodes now appear in the node panel.
 
 ## Add your credentials
 
-1. Open **Credentials → Add credential** and choose **Scraper API**.
+1. Open **Credentials → Add credential** and choose **Geonode Scraper API**.
 2. Paste your key into **API Key**. Leave **Base URL** as `https://scraper.geonode.io`.
 3. Select **Test**. n8n calls `GET /v1/statistics` with the key, so a green check means the key works.
 
 ## Your first workflow
 
-1. Add a **Scraper API** node.
+1. Add a **Geonode Scraper API** node.
 2. Set **Resource** to **Extract** and **Operation** to **Run Extraction**.
 3. Enter `https://example.com` as the URL, choose **Markdown** in **Output Formats** and keep **Processing Mode** on **Sync (Block Until Done)**.
 4. Select **Execute step**. The output has the page in `data.markdown` and the cost in `tokens_charged`.
@@ -49,7 +49,7 @@ Background extractions, batches and crawls return a job ID straight away. **Wait
 
 ## Start a workflow when a job finishes
 
-1. Add a **Scraper API Trigger** node to a new workflow.
+1. Add a **Geonode Scraper API Trigger** node to a new workflow.
 2. Choose the **Event Type**: **Extract Completed** or **Crawl Completed**.
 3. Keep **Verify Signature** on. Then the node rejects deliveries whose `X-Webhook-Signature` doesn't match the secret it got when it registered.
 4. Save and activate the workflow.
