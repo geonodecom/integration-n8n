@@ -5,6 +5,8 @@ import {
   INodeType,
   INodeTypeDescription,
   JsonObject,
+  NodeApiError,
+  NodeConnectionTypes,
   NodeOperationError,
 } from 'n8n-workflow';
 
@@ -27,17 +29,18 @@ type Handler = (this: IExecuteFunctions, i: number, operation: string) => Promis
 
 export class ScraperApi implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Scraper API',
+    displayName: 'Geonode Scraper API',
     name: 'scraperApi',
     icon: 'file:scraper-geonode.svg',
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"]}}: {{$parameter["resource"]}}',
     description:
-      'Interact with the Scraper API (extract, search, batch, map, crawl, webhooks, statistics)',
-    defaults: { name: 'Scraper API' },
-    inputs: ['main'],
-    outputs: ['main'],
+      'Interact with the Geonode Scraper API (extract, search, batch, map, crawl, webhooks, statistics)',
+    defaults: { name: 'Geonode Scraper API' },
+    usableAsTool: true,
+    inputs: [NodeConnectionTypes.Main],
+    outputs: [NodeConnectionTypes.Main],
     credentials: [{ name: 'scraperApiApi', required: true }],
     properties: [
       {
@@ -95,7 +98,11 @@ export class ScraperApi implements INodeType {
           });
           continue;
         }
-        throw error;
+        // Both constructors return an error of their own class unchanged.
+        if (error instanceof NodeApiError) {
+          throw new NodeApiError(this.getNode(), error as unknown as JsonObject);
+        }
+        throw new NodeOperationError(this.getNode(), error as Error, { itemIndex: i });
       }
     }
 

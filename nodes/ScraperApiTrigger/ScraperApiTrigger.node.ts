@@ -6,6 +6,7 @@ import {
   IWebhookFunctions,
   IWebhookResponseData,
   JsonObject,
+  NodeConnectionTypes,
 } from 'n8n-workflow';
 
 import { scraperApiRequest } from '../ScraperApi/GenericFunctions';
@@ -30,16 +31,16 @@ function isValidSignature(secret: string, rawBody: Buffer | string, providedHead
 
 export class ScraperApiTrigger implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Scraper API Trigger',
+    displayName: 'Geonode Scraper API Trigger',
     name: 'scraperApiTrigger',
     icon: 'file:scraper-geonode.svg',
     group: ['trigger'],
     version: 1,
     subtitle: '={{$parameter["event_type"]}}',
-    description: 'Starts the workflow when the Scraper API delivers a webhook event',
-    defaults: { name: 'Scraper API Trigger' },
+    description: 'Starts the workflow when the Geonode Scraper API delivers a webhook event',
+    defaults: { name: 'Geonode Scraper API Trigger' },
     inputs: [],
-    outputs: ['main'],
+    outputs: [NodeConnectionTypes.Main],
     credentials: [{ name: 'scraperApiApi', required: true }],
     webhooks: [
       {
@@ -129,8 +130,11 @@ export class ScraperApiTrigger implements INodeType {
             method: 'DELETE',
             url: `/v1/webhooks/${webhookData.webhookId}`,
           });
-        } catch {
-          // ignore — already gone or unreachable
+        } catch (error) {
+          // Deactivation still succeeds: the webhook may already be gone or the API unreachable.
+          this.logger.warn(
+            `Could not delete Geonode Scraper API webhook ${String(webhookData.webhookId)}: ${(error as Error).message}`,
+          );
         }
 
         delete webhookData.webhookId;

@@ -7,7 +7,8 @@ import {
 
 export class ScraperApiApi implements ICredentialType {
   name = 'scraperApiApi';
-  displayName = 'Scraper API';
+  displayName = 'Geonode Scraper API';
+  icon = 'file:scraper-geonode.svg' as const;
   documentationUrl = 'https://docs.geonode.com/docs/scraper-api/v1/reference';
 
   properties: INodeProperties[] = [
