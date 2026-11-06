@@ -6,6 +6,9 @@ The format is inspired by Keep a Changelog.
 
 ## [Unreleased]
 
+- The icon is 1 KB instead of 638 KB and looks the same; the package is about 1.9 MB smaller. The node, trigger and credential set it for both light and dark themes.
+- The README no longer says the workflow recipes are untested: the Extract recipe ran on n8n 1.85 and 2.45 with 0.3.0.
+
 ## [0.3.0] - 2026-11-01
 
 - The node, trigger and credential are named "Geonode Scraper API" and "Geonode Scraper API Trigger" in the n8n editor. Internal node and credential names are unchanged, so existing workflows keep working.

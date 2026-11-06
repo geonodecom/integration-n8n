@@ -69,8 +69,6 @@ Can't install on n8n Cloud? This is a self-hosted community node and has not bee
 No trigger events? Check workflow activation, the reachable webhook URL and signature verification. A successful credential test alone does not prove that callbacks arrive.
 
 Need parsed product fields or change alerts? Add your own parsing, storage and comparison nodes after extraction. The content response does not promise those outputs automatically.
-
-These recipes describe source-supported workflows. They have not been run as authenticated end-to-end examples in this review.
 <!-- END SHARED WORKFLOW GUIDE -->
 
 ## Develop locally

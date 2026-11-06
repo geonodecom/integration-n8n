@@ -1,6 +1,6 @@
 # n8n: workflow recipes and output guide
 
-[Repository overview](../README.md) · [Geonode documentation](https://www.npmjs.com/package/n8n-nodes-scraperapi)
+[Repository overview](../README.md) · [Geonode documentation](https://docs.geonode.com/docs/scraper-api/guides/sdks/n8n)
 
 ## Example: a URL to a spreadsheet row
 
