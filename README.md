@@ -27,6 +27,8 @@ Bring web data into self-hosted n8n agents and workflows with Geonode’s commun
 3. Add a **Geonode Scraper API** node. Choose **Extract → Run Extraction**, enter a URL, and choose **Markdown** as the output format.
 4. Execute the step. The result contains the page content in `data.markdown` and its cost in `tokens_charged`.
 
+To skip steps 3 and 4, import [examples/extract-page-to-markdown.json](examples/extract-page-to-markdown.json) with **Workflows → Import from File**, select your credential on the Geonode Scraper API node and execute the workflow.
+
 You can obtain a key from **API Keys** in the [Geonode dashboard](https://app.geonode.com/). The credential test checks authenticated usage statistics.
 
 ## Build these workflows

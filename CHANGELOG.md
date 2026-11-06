@@ -6,6 +6,8 @@ The format is inspired by Keep a Changelog.
 
 ## [Unreleased]
 
+- An example workflow to import: `examples/extract-page-to-markdown.json` extracts one page as Markdown. It is not part of the npm package.
+
 ## [0.3.1] - 2026-11-06
 
 - The icon is 1 KB instead of 638 KB and looks the same; the package is about 1.9 MB smaller. The node, trigger and credential set it for both light and dark themes.

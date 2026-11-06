@@ -1,0 +1,35 @@
+{
+  "name": "Geonode: extract a page as Markdown",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6f0d2c3e-1a4b-4c5d-8e9f-000000000001",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "resource": "extract",
+        "operation": "run",
+        "url": "https://docs.python.org/3/library/json.html",
+        "formats": ["markdown"],
+        "processing_mode": "sync"
+      },
+      "id": "6f0d2c3e-1a4b-4c5d-8e9f-000000000002",
+      "name": "Extract page as Markdown",
+      "type": "n8n-nodes-scraperapi.scraperApi",
+      "typeVersion": 1,
+      "position": [260, 0]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [[{ "node": "Extract page as Markdown", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {},
+  "pinData": {}
+}
