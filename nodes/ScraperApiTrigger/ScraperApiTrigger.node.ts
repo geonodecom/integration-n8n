@@ -33,7 +33,7 @@ export class ScraperApiTrigger implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Geonode Scraper API Trigger',
     name: 'scraperApiTrigger',
-    icon: 'file:scraper-geonode.svg',
+    icon: { light: 'file:scraper-geonode.svg', dark: 'file:scraper-geonode.svg' },
     group: ['trigger'],
     version: 1,
     subtitle: '={{$parameter["event_type"]}}',

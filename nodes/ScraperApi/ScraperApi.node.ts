@@ -31,7 +31,8 @@ export class ScraperApi implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Geonode Scraper API',
     name: 'scraperApi',
-    icon: 'file:scraper-geonode.svg',
+    // One tile works on both themes.
+    icon: { light: 'file:scraper-geonode.svg', dark: 'file:scraper-geonode.svg' },
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"]}}: {{$parameter["resource"]}}',
