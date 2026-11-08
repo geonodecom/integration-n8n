@@ -4,8 +4,9 @@ All notable changes to the n8n community node will be documented in this file.
 
 The format is inspired by Keep a Changelog.
 
-## [Unreleased]
+## [0.3.2] - 2026-11-08
 
+- The package's author email is logins@geonode.com, the address of the npm account that publishes it, instead of support@geonode.com. n8n's Creator Portal checks that we own the package through this address.
 - An example workflow to import: `examples/extract-page-to-markdown.json` extracts one page as Markdown. It is not part of the npm package.
 
 ## [0.3.1] - 2026-11-06
